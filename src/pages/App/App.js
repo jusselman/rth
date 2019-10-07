@@ -1,14 +1,16 @@
 import React from 'react';
 import './App.css';
-import SignupPage from '../SignupPage/SignupPage';
+import { Route, Switch, Redirect } from 'react-router-dom'; 
+  import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage'; 
-  mport userService from '../../utils/userService';
+import userService from '../../utils/userService';
 import tokenService from '../../utils/tokenService'; 
 
   unction App() {
   return (
     <div className="App">
 
+    
     </div>
   );
 }
