@@ -38,7 +38,7 @@ async function login(req, res) {
 
 function createJWT(user) {
     return jwt.sign(
-        { user }, // data payload
+        { user },
         SECRET,
         { expiresIn: '24h' }
     );
