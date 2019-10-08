@@ -21,7 +21,12 @@ class SignupForm extends Component {
     handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            console.log('before await');
+            console.log(this.state);
+
             await userService.signup(this.state);
+            console.log('after await');
+
             this.props.handleSignupOrLogin();
             this.props.history.push('/');
         } catch (err) {

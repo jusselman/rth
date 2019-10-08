@@ -10,6 +10,7 @@ function signup(user) {
     })
         .then(res => {
             if (res.ok) return res.json();
+            console.log(res.ok)
             throw new Error('Email already taken!');
         })
         .then(({ token }) => tokenService.setToken(token));
