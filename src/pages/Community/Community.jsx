@@ -1,16 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavBar from '../../components/NavBar/NavBar';
+import './Community.css';
 
 const Community = (props) => {
     return (
         <div className="Community">
-            <NavBar
-                user={props.user}
-                handleLogout={props.handleLogout}
-            />
+            <h1>Community Page</h1>
         </div>
     )
 }
 
-export default Community
+export default Community;

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './BeatPad.css';
+import './BeatPad.css';
 
 const BeatPad = (props) => (
     <div>

@@ -12,11 +12,10 @@ async function signup(req, res) {
     console.log(user)
     try {
         await user.save();
-        console.log('got here')
         const token = createJWT(user);
         res.json({ token });
     } catch (err) {
-        // Probably a duplicate email
+        console.log(err);
         res.status(400).json(err);
     }
 }

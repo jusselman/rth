@@ -3,6 +3,7 @@ import './App.css';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import BeatPadPage from '../BeatPadPage/BeatPadPage';
+import About from '../About/About';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import Community from '../Community/Community';
@@ -37,6 +38,18 @@ class App extends Component {
           <Route exact path='/' render={() =>
             <BeatPadPage
               
+            />
+          }/>
+            <Route exact path='/about' render={() => 
+            <About
+            />
+          }/>
+          <Route exact path='/community' render={() => 
+            <Community
+            />
+          }/>
+          <Route exact path='/beatpadpage' render={() => 
+            <BeatPadPage
             />
           }/>
             <Route exact path='/signup' render={({ history }) => 

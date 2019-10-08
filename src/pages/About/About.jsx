@@ -10,4 +10,4 @@ const About = (props) => {
     )
 }
 
-export default BeatPadPage;
+export default About;

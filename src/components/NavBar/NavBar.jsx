@@ -12,11 +12,15 @@ const NavBar = (props) => {
         :
         <div>
             &nbsp;&nbsp;|&nbsp;&nbsp;
+            <Link to='/' className='NavBar-link'>HOME</Link>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
             <Link to='/login' className='NavBar-link'>ENTER</Link>
             &nbsp;&nbsp;|&nbsp;&nbsp;
             <Link to='/signup' className='NavBar-link'>JOIN</Link>
             &nbsp;&nbsp;|&nbsp;&nbsp;
             <Link to='/about' className='NavBar-Link'>ABOUT</Link>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <Link to='/beatpadpage' className='NavBar-Link'>PADS</Link>
             &nbsp;&nbsp;|&nbsp;&nbsp;
             <Link to='/community' className='NavBar-link'>POSTS</Link>
             &nbsp;&nbsp;|&nbsp;&nbsp;
