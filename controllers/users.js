@@ -1,11 +1,13 @@
 const User = require('../models/user');
+const Profile = require('../models/profile');
 const jwt = require('jsonwebtoken');
 const SECRET = process.env.SECRET;
 
 module.exports = {
     signup,
-    login
+    login,
 };
+
 
 async function signup(req, res) {
     const user = new User(req.body);

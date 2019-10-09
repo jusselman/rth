@@ -52,6 +52,10 @@ class App extends Component {
             <BeatPadPage
             />
           }/>
+          <Route exact path='/profile' render={() => 
+            <Profile
+            />
+          }/>
             <Route exact path='/signup' render={({ history }) => 
             <SignupPage
               history={history}
