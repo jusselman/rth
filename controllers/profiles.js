@@ -7,8 +7,8 @@ module.exports = {
 function createProfile(req, res) {
     var profile = new Profile(req.body);
     profile.save(function (err, savedProfile) {
-        if (err) return res.redirect('/profile');
-        res.redirect('/')
+        if (err) return res.redirect('/profilesignup');
+        res.redirect('/profile')
     })
 }
 

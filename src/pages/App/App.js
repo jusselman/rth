@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
+import Home from '../Home/Home';
 import BeatPadPage from '../BeatPadPage/BeatPadPage';
 import About from '../About/About';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import Community from '../Community/Community';
+import Profile from '../Profile/Profile';
+import ProfileSignUp from '../../components/ProfileSignUp/ProfileSignUp';
 import userService from '../../utils/userService';
 import tokenService from '../../utils/tokenService';
 
@@ -36,8 +39,7 @@ class App extends Component {
         />
         <Switch>
           <Route exact path='/' render={() =>
-            <BeatPadPage
-              
+            <Home
             />
           }/>
             <Route exact path='/about' render={() => 
@@ -53,8 +55,7 @@ class App extends Component {
             />
           }/>
           <Route exact path='/profile' render={() => 
-            <Profile
-            />
+            <Profile />
           }/>
             <Route exact path='/signup' render={({ history }) => 
             <SignupPage

@@ -4,6 +4,7 @@ const profileSchema = new mongoose.Schema({
     photo: String,
     name: String,
     description: String,
+    link: String
 },
 );
 
