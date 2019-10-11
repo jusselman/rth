@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import userService from '../../utils/userService';
+import profileService from '../../utils/profileService';
+
+
 
 
 class ProfileSignUp extends Component {
@@ -20,16 +22,16 @@ class ProfileSignUp extends Component {
     handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await userService.signup(this.state);
-            this.props.handleSignupOrLogin();
-            this.props.history.push('/');
+            const profile = await profileService.addProfile(this.state);
+            this.props.addProfileToState(profile);
+            this.props.history.push('/profile');
         } catch (err) {
-            this.props.updateMessage(err.message);
+            console.log(err)
         }
     }
 
     isFormInvalid() {
-        return !(this.state.name && this.state.email && this.state.password === this.state.passwordConf);
+        return !(this.state.photo && this.state.name && this.state.description && this.state.link);
     }
 
     render() {
@@ -59,7 +61,7 @@ class ProfileSignUp extends Component {
                     </div>
                     <div className="form-group">
                         <div className="col-sm-12 text-center">
-                            <button className="btn btn-default" disabled={this.isFormInvalid()}>Submit</button>&nbsp;&nbsp;
+                            <button className="btn btn-default" onClick={this.profileFormSubmit} disabled={this.isFormInvalid()}>Submit</button>&nbsp;&nbsp;
                             <Link to='/'>Cancel</Link>
                         </div>
                     </div>

@@ -17,8 +17,21 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      user: userService.getUser()
+      user: userService.getUser(),
+      profile: ""
     }
+  }
+
+  handleProfileBtn = () => {
+    console.log("profile-btn clicked")
+    // redirectURL = '/profile'
+  }
+
+  profileFormSubmit = (e) => {
+    console.log(e.target.photo)
+    console.log(e.target.name)
+    console.log(e.target.description)
+    console.log(e.target.link)
   }
   
   handleLogout = () => {
@@ -28,6 +41,10 @@ class App extends Component {
 
   handleSignupOrLogin = () => {
     this.setState({user: userService.getUser()});
+  }
+
+  addProfileToState = (profile) => {
+    this.setState({ profile })
   }
 
   render() {
@@ -54,8 +71,20 @@ class App extends Component {
             <BeatPadPage
             />
           }/>
+          <Route exact path='/profile-sign-up' render={( {history }) => 
+            <ProfileSignUp
+            history = {history}
+            addProfileToState = {
+              this.addProfileToState
+            }
+            />
+          }/>
           <Route exact path='/profile' render={() => 
-            <Profile />
+            <Profile 
+            profile = { this.state.profile }
+            handleProfileBtn={this.handleProfileBtn}
+            profileFormSubmit={this.profileFormSubmit}
+            />
           }/>
             <Route exact path='/signup' render={({ history }) => 
             <SignupPage

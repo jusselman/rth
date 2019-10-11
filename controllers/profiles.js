@@ -1,14 +1,14 @@
 const Profile = require('../models/profile');
 
 module.exports = {
-    createProfile
+    addProfile
 };
 
-function createProfile(req, res) {
+function addProfile(req, res) {
     var profile = new Profile(req.body);
     profile.save(function (err, savedProfile) {
-        if (err) return res.redirect('/profilesignup');
-        res.redirect('/profile')
+        if (err) return res.status(400).json(err);
+        res.json(savedProfile)
     })
 }
 
