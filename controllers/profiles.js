@@ -7,17 +7,18 @@ module.exports = {
     editProfile
 };
 
-function editProfile(req, res) {
-    var profile = Profile.findOneAndUpdate({ _id: req.body.user });
-    profile.push(req.body);
-    profile.save();
-    res.json(profile)
+async function editProfile(req, res) {
+    req.body.user.name = req.body.name;
+    var profile = await Profile.findOneAndUpdate({ user: req.body.user._id }, req.body, { new: true });
+    console.log(profile)
 
+    // profile.save();
+    return res.json(profile)
 }
 
 function addProfile(req, res) {
     var profile = new Profile(req.body);
-    console.log(req.body);
+    console.log(req.body.user);
     profile.save(function (err, savedProfile) {
         if (err) return res.status(400).json(err);
         res.json(savedProfile)

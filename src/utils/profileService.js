@@ -1,6 +1,6 @@
 import userService from './userService';
 
-function addProfile(profileData) {
+async function addProfile(profileData) {
     if (!userService.getUser()) return;
     return fetch('/api/profiles/createProfile', {
         method: 'POST',
@@ -13,7 +13,7 @@ function addProfile(profileData) {
         });
 }
 
-function updateProfile(profileData) {
+async function updateProfile(profileData) {
     return fetch(`/api/profiles/editProfile`, {
         method: 'PUT',
         headers: new Headers({ 'Content-Type': 'application/json' }),
@@ -34,5 +34,6 @@ function getProfile(profileData) {
 
 export default {
     addProfile,
-    getProfile
+    getProfile,
+    updateProfile
 }

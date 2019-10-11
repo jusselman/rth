@@ -24,10 +24,7 @@ class App extends Component {
     }
   }
   
-   async componentDidMount() {
-    let result = await profileService.getProfile(this.state.user._id);
-    this.setState({ profile: result })
-  }
+
 
   handleLogout = () => {
     userService.logout();
@@ -41,6 +38,11 @@ class App extends Component {
   addProfileToState = (profile) => {
     this.setState({ profile })
   }
+
+  // handleProfileBtn = () => {
+  //   console.log("profile-btn clicked")
+  //   redirectURL = '/profile'
+  // }
 
 
 
@@ -79,15 +81,19 @@ class App extends Component {
           }/>
           <Route exact path='/profile' render={() => 
             <Profile 
+            user = {this.state.user } 
             profile = { this.state.profile }
-            // handleProfileBtn={this.handleProfileBtn}
-            // profileFormSubmit={this.profileFormSubmit}
+            handleProfileBtn={this.handleProfileBtn}
+            profileFormSubmit={this.profileFormSubmit}
+            addProfileToState={this.addProfileToState}
             />
           }/>
-          <Route exact path='/edit-page' render={() => 
+          <Route exact path='/edit-page' render={({ history }) => 
             <EditPage
+            addProfileToState = {this.addProfileToState}
             profile = { this.state.profile }
             user = { this.state.user }
+            history = { history }
             />
           }/>
 

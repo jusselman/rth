@@ -22,7 +22,9 @@ class ProfileSignUp extends Component {
         e.preventDefault();
         try {
             const profile = await profileService.addProfile(this.state);
-            this.props.addProfileToState(profile);
+            let result = await profileService.getProfile(this.state.user._id);
+            // this.props.addProfile({ profile: result })
+            this.props.addProfileToState(result);
             this.props.history.push('/profile');
         } catch (err) {
             console.log(err)
@@ -65,6 +67,7 @@ class ProfileSignUp extends Component {
                         </div>
                     </div>
                 </form>
+
             </div>
         );
     }

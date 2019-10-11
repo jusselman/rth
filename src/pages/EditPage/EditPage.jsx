@@ -22,8 +22,10 @@ class EditPage extends Component {
         e.preventDefault();
         try {
             const profile = await profileService.updateProfile(this.state);
+            console.log(profile)
             this.props.addProfileToState(profile);
             this.props.history.push('/profile');
+
         } catch (err) {
             console.log(err)
         }
