@@ -9,31 +9,26 @@ import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import Community from '../Community/Community';
 import Profile from '../Profile/Profile';
+import EditPage from '../EditPage/EditPage';
 import ProfileSignUp from '../../components/ProfileSignUp/ProfileSignUp';
 import userService from '../../utils/userService';
 import tokenService from '../../utils/tokenService';
+import profileService from '../../utils/profileService';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       user: userService.getUser(),
-      profile: ""
+      profile: ''
     }
   }
-
-  handleProfileBtn = () => {
-    console.log("profile-btn clicked")
-    // redirectURL = '/profile'
-  }
-
-  profileFormSubmit = (e) => {
-    console.log(e.target.photo)
-    console.log(e.target.name)
-    console.log(e.target.description)
-    console.log(e.target.link)
-  }
   
+   async componentDidMount() {
+    let result = await profileService.getProfile(this.state.user._id);
+    this.setState({ profile: result })
+  }
+
   handleLogout = () => {
     userService.logout();
     this.setState({ user: null });
@@ -46,6 +41,8 @@ class App extends Component {
   addProfileToState = (profile) => {
     this.setState({ profile })
   }
+
+
 
   render() {
     return (
@@ -77,15 +74,23 @@ class App extends Component {
             addProfileToState = {
               this.addProfileToState
             }
+            user={this.state.user}
             />
           }/>
           <Route exact path='/profile' render={() => 
             <Profile 
             profile = { this.state.profile }
-            handleProfileBtn={this.handleProfileBtn}
-            profileFormSubmit={this.profileFormSubmit}
+            // handleProfileBtn={this.handleProfileBtn}
+            // profileFormSubmit={this.profileFormSubmit}
             />
           }/>
+          <Route exact path='/edit-page' render={() => 
+            <EditPage
+            profile = { this.state.profile }
+            user = { this.state.user }
+            />
+          }/>
+
             <Route exact path='/signup' render={({ history }) => 
             <SignupPage
               history={history}

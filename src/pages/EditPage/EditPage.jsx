@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import profileService from '../../utils/profileService';
 
 
-class ProfileSignUp extends Component {
+class EditPage extends Component {
     state = {
-        photo: "",
-        name: "",
-        description: "",
-        link: "",
+        photo: '',
+        name: '',
+        description: '',
+        link: '',
         user: this.props.user
     };
 
@@ -21,7 +21,7 @@ class ProfileSignUp extends Component {
     handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const profile = await profileService.addProfile(this.state);
+            const profile = await profileService.updateProfile(this.state);
             this.props.addProfileToState(profile);
             this.props.history.push('/profile');
         } catch (err) {
@@ -60,7 +60,7 @@ class ProfileSignUp extends Component {
                     </div>
                     <div className="form-group">
                         <div className="col-sm-12 text-center">
-                            <button className="btn btn-default" onClick={this.profileFormSubmit} disabled={this.isFormInvalid()}>Submit</button>&nbsp;&nbsp;
+                            <button className="btn btn-default" onClick={this.handleSubmit} disabled={this.isFormInvalid()}>Submit</button>&nbsp;&nbsp;
                             <Link to='/'>Cancel</Link>
                         </div>
                     </div>
@@ -70,6 +70,6 @@ class ProfileSignUp extends Component {
     }
 }
 
-export default ProfileSignUp;
+export default EditPage;
 
 
