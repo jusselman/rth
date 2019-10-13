@@ -63,7 +63,7 @@ class EditPage extends Component {
                     <div className="form-group">
                         <div className="col-sm-12 text-center">
                             <button className="btn btn-default" onClick={this.handleSubmit} disabled={this.isFormInvalid()}>Submit</button>&nbsp;&nbsp;
-                            <Link to='/'>Cancel</Link>
+                            <Link to='/profile'>Cancel</Link>
                         </div>
                     </div>
                 </form>

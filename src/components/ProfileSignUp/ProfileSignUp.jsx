@@ -22,7 +22,7 @@ class ProfileSignUp extends Component {
         e.preventDefault();
         try {
             const profile = await profileService.addProfile(this.state);
-            let result = await profileService.getProfile(this.state.user._id);
+            let result = await profileService.getProfile(profile._id.toString());
             // this.props.addProfile({ profile: result })
             this.props.addProfileToState(result);
             this.props.history.push('/profile');

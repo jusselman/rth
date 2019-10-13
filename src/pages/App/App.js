@@ -23,8 +23,13 @@ class App extends Component {
       profile: ''
     }
   }
-  
 
+
+  handleDeleteProfile = async (id) => {
+    console.log(typeof (id));
+    await profileService.deleteProfile(id);
+    this.setState({ profile: '' })
+  }
 
   handleLogout = () => {
     userService.logout();
@@ -32,7 +37,7 @@ class App extends Component {
   }
 
   handleSignupOrLogin = () => {
-    this.setState({user: userService.getUser()});
+    this.setState({ user: userService.getUser() });
   }
 
   addProfileToState = (profile) => {
@@ -44,6 +49,18 @@ class App extends Component {
   //   redirectURL = '/profile'
   // }
 
+  // async componentDidMount() {
+  //   const profile = await profileService.getProfileWithUserID(this.state.user._id.toString());
+  //   this.setState({ profile });
+  // }
+
+  async componentDidMount() {
+    const { user } = this.props;
+    if (user != null) {
+      let result = await profileService.getProfile(user._id);
+      this.props.addProfileToState(result);
+    }
+  }
 
 
   render() {
@@ -57,64 +74,65 @@ class App extends Component {
           <Route exact path='/' render={() =>
             <Home
             />
-          }/>
-            <Route exact path='/about' render={() => 
+          } />
+          <Route exact path='/about' render={() =>
             <About
             />
-          }/>
-          <Route exact path='/community' render={() => 
+          } />
+          <Route exact path='/community' render={() =>
             <Community
             />
-          }/>
-          <Route exact path='/beatpadpage' render={() => 
+          } />
+          <Route exact path='/beatpadpage' render={() =>
             <BeatPadPage
             />
-          }/>
-          <Route exact path='/profile-sign-up' render={( {history }) => 
+          } />
+          <Route exact path='/profile-sign-up' render={({ history }) =>
             <ProfileSignUp
-            history = {history}
-            addProfileToState = {
-              this.addProfileToState
-            }
-            user={this.state.user}
+              history={history}
+              addProfileToState={
+                this.addProfileToState
+              }
+              user={this.state.user}
             />
-          }/>
-          <Route exact path='/profile' render={() => 
-            <Profile 
-            user = {this.state.user } 
-            profile = { this.state.profile }
-            handleProfileBtn={this.handleProfileBtn}
-            profileFormSubmit={this.profileFormSubmit}
-            addProfileToState={this.addProfileToState}
+          } />
+          <Route exact path='/profile' render={() =>
+            <Profile
+              user={this.state.user}
+              profile={this.state.profile}
+              handleProfileBtn={this.handleProfileBtn}
+              profileFormSubmit={this.profileFormSubmit}
+              addProfileToState={this.addProfileToState}
+              handleDeleteProfile={this.handleDeleteProfile}
             />
-          }/>
-          <Route exact path='/edit-page' render={({ history }) => 
+          } />
+          <Route exact path='/edit-page' render={({ history }) =>
             <EditPage
-            addProfileToState = {this.addProfileToState}
-            profile = { this.state.profile }
-            user = { this.state.user }
-            history = { history }
+              addProfileToState={this.addProfileToState}
+              profile={this.state.profile}
+              user={this.state.user}
+              history={history}
             />
-          }/>
+          } />
 
-            <Route exact path='/signup' render={({ history }) => 
+          <Route exact path='/signup' render={({ history }) =>
             <SignupPage
               history={history}
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
-          }/>
-          <Route exact path='/login' render={({ history }) => 
+          } />
+          <Route exact path='/login' render={({ history }) =>
             <LoginPage
               history={history}
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
-          }/>
-          
+          } />
+
         </Switch>
       </div>
-      );
-    }
+    );
   }
+}
 
 
 export default App;

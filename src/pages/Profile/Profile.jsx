@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import profileService from '../../utils/profileService';
-import ProfileSignUp from '../../components/ProfileSignUp/ProfileSignUp';
 
 class Profile extends Component {
     state = {
@@ -10,9 +9,14 @@ class Profile extends Component {
     }
 
     async componentDidMount() {
-        let result = await profileService.getProfile(this.props.user._id);
-        this.props.addProfileToState(result);
+        try {
+            let result = await profileService.getProfileWithUserID(this.props.user._id.toString());
+            this.props.addProfileToState(result);
+        } catch (err) {
+            console.log(err)
+        }
     }
+
 
     render() {
         return (
@@ -23,7 +27,12 @@ class Profile extends Component {
                     <div><p>{this.props.profile.photo}</p>
                         <p>{this.props.profile.name}</p>
                         <p>{this.props.profile.description}</p>
-                        <p>{this.props.profile.link}</p></div>
+                        <p>{this.props.profile.link}</p>
+                        <Link to='/edit-page' className='edit-profile'>EDIT</Link><br></br>
+                        <Link to='/profile' className='delete-profile' onClick={() => this.props.handleDeleteProfile(this.props.profile._id.toString())}>DELETE</Link>
+
+                    </div>
+
 
                     : <Link to='/profile-sign-up'>Create New Profile</Link>
 

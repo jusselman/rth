@@ -18,8 +18,8 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/profiles', require('./routes/api/profiles'));
 
-// The following "catch all" route (note the *)is necessary
-// for a SPA's client-side routing to properly work 
+// The following "catch *" route is necessary
+// for SPA client-side routing to properly work 
 app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
