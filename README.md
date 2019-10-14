@@ -1,14 +1,18 @@
-# RTH
+# RTHH
 
 [RTH](https://github.com/jusselman/rth)
 
->> **RTH** is a social media app whose goal is to unite the world through music via
+>> **RTHH** is a social media app whose goal is to unite the world through music via
 an easily accessible, intuitive interface that allows users to compose their own music,
 display their musical interests, and connect with musicians and music lovers from around 
 the globe. 
 
 
-![Screenshot](https://imgur.com/p36Crc9)
+![Screenshot](https://i.imgur.com/7JKL1Qb.png)
+![Screenshot](https://i.imgur.com/1GONx06.png)
+![Screenshot](https://i.imgur.com/1rY81r9.png)
+
+
 
 ## Technologies Uses:
 
