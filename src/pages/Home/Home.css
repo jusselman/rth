@@ -1,0 +1,19 @@
+* {
+    text-align: center;
+}
+
+body {
+    background-image: url('https://i.imgur.com/nnXpvXD.jpg');
+    color: #fff;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.Profile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
