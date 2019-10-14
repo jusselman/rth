@@ -5,7 +5,13 @@ import './About.css';
 const About = (props) => {
     return (
         <div className="About">
-            <h1>About Page</h1>
+            <h1>Mission:</h1>
+            <p>RTHH was established in order to democratize the music industry
+                and connect like-minded creatives the world over. Our platform
+                provides our users with a free means of producing music, anywhere,
+                anytime, anyhow. Compose a song, link it to your profile, link your
+                &#169; SoundCloud account, be the next big thing.
+            </p>
         </div>
     )
 }
