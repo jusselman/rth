@@ -40,9 +40,5 @@
       "last 1 safari version"
     ]
   },
-  "heroku-run-build-script": true,
-  "devDependencies": {
-    "object-assign": "^4.1.1"
-  },
   "proxy": "http://localhost:3001"
 }
