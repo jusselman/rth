@@ -44,16 +44,6 @@ class App extends Component {
     this.setState({ profile })
   }
 
-  // handleProfileBtn = () => {
-  //   console.log("profile-btn clicked")
-  //   redirectURL = '/profile'
-  // }
-
-  // async componentDidMount() {
-  //   const profile = await profileService.getProfileWithUserID(this.state.user._id.toString());
-  //   this.setState({ profile });
-  // }
-
   async componentDidMount() {
     const { user } = this.props;
     if (user != null) {
@@ -61,7 +51,6 @@ class App extends Component {
       this.props.addProfileToState(result);
     }
   }
-
 
   render() {
     return (
