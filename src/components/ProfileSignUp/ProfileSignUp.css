@@ -1,0 +1,7 @@
+header.profile-signup-header {
+    font-size: 30px;
+    top: 25%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import profileService from '../../utils/profileService';
+import './ProfileSignUp.css';
 
 
 class ProfileSignUp extends Component {
@@ -38,8 +39,8 @@ class ProfileSignUp extends Component {
     render() {
         return (
             <div>
-                <header className="header-footer">Create Rth Profile</header>
-                <form className="form-horizontal" onSubmit={this.handleSubmit} >
+                <header className="profile-signup-header">Create Rth Profile</header>
+                <form className="form-horizontal form-signup" onSubmit={this.handleSubmit} >
                     <div className="form-group">
                         <div className="col-sm-12">
                             <input type="text" className="form-control" placeholder="Photo" value={this.state.photo} name="photo" onChange={this.handleChange} />

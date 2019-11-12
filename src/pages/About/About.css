@@ -7,4 +7,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
 }
