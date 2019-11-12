@@ -3,7 +3,6 @@ import './BeatPad.css';
 
 const BeatPad = (props) => (
     <div>
-        <h1>Beats on the Fly</h1>
         <div className="wrapper anim">
             <div className="keys">
                 {/* <!-- FIRST ROW OF FOUR KEYPADS --> */}
