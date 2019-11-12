@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import profileService from '../../utils/profileService';
+import './Profile.css';
 
 class Profile extends Component {
     state = {
@@ -34,7 +35,7 @@ class Profile extends Component {
                     </div>
 
 
-                    : <Link to='/profile-sign-up'>Create New Profile</Link>
+                    : <Link to='/profile-sign-up'><h2 className="profile-create">Create New Profile</h2></Link>
 
                 }
 
