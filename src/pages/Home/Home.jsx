@@ -4,7 +4,7 @@ import './Home.css';
 
 const Home = (props) => {
     return (
-        <div className="Home">
+        <div className="Home anim">
             <h1>RTHH</h1>
             <h2>Make Beats on the fly</h2>
             <h2>Upload, Share, Link</h2>
