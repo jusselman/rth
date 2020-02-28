@@ -1,12 +1,12 @@
 import React from 'react';
-import BeatPad from '../../components/BeatPad/BeatPad';
+import BeatMachine from '../../components/BeatMachine/BeatMachine';
 import './BeatPadPage.css';
 
-const BeatPadPage = (props) => {
+const BeatPadPage = () => {
     return (
         <div className="BeatPadPage">
             <h1>Beats On The Fly</h1>
-            <BeatPad />
+            <BeatMachine />
 
             {/* <!-- FIRST ROW OF KEYPADS --> */}
             <audio data-key="50" src="../sounds/kick1.wav"></audio>

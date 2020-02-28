@@ -24,6 +24,7 @@ class App extends Component {
     }
   }
 
+  
 
   handleDeleteProfile = async (id) => {
     console.log(typeof (id));

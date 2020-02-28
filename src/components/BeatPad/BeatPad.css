@@ -15,7 +15,7 @@
     }
 }
 
-div.keys {
+.keys {
     width: 5%;
     margin: 5rem auto;
     text-align: center;
@@ -24,8 +24,6 @@ div.keys {
     grid-column-gap: 0;
     justify-content: center;
 }
-
-
 
 .key {
     border: 4px solid black;
@@ -47,10 +45,6 @@ div.keys {
     box-shadow: 0 0 10px #6bffe0;
 }
 
-.kbd {
-    display: block;
-    font-size: 40px;
-}
 
 .sound {
     font-size: 1.2rem;
@@ -80,70 +74,12 @@ div.keys {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-content {
-    background-color: #f4f4f4;
-    margin: 5rem auto;
-    /* padding: 20px; */
-    width: 30%;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),
-        0 7px 20px 0 rgba(0, 0, 0, 0.17);
-    animation-name: modalOpen;
-    animation-duration: 1s;
-}
 
-.modal-header h2,
-modal-footer h2 {
-    margin: 0;
-}
-
-.modal-footer {
-    background: rgb(75, 237, 226);
-    padding: 10px;
-    color: #fff;
-    text-align: center;
-    height: 30px;
-}
-
-.modal-header {
-    background: rgb(66, 66, 66);
-    padding: 15px;
-    color: #fff;
-    text-align: center;
-}
-
-.modal-body {
-    padding: 10px 20px;
-}
-
-.closeBtn {
-    color: #fff;
-    float: right;
-    font-size: 30px;
-
-}
-
-.closeBtn:hover,
-.closeBtn:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-@keyframes modalOpen {
-    from {
-        opacity: 0
-    }
-
-    to {
-        opacity: 1
-    }
-}
 
 
 @media(max-width:769px) {
 
     .key {
-
         width: 80px;
         height: 80px;
         font-size: 16px;
@@ -160,9 +96,4 @@ modal-footer h2 {
     .keys {
         margin: 2rem auto !important;
     }
-
-    .modal-content {
-        width: 90%;
-    }
-
 }
