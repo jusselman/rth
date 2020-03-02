@@ -37,6 +37,11 @@
     color: rgb(219, 255, 228);
     background: rgba(0, 0, 0, 0.4);
     text-shadow: 0 0 5px #000;
+
+}
+
+.drum-pad {
+    transition: .3s all ease;
 }
 
 .playing {
@@ -45,7 +50,6 @@
     box-shadow: 0 0 10px #6bffe0;
 }
 
-
 .sound {
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -53,16 +57,7 @@
     color: #6bffe0;
 }
 
-.instructions {
-    transition: .5s;
-}
-
-.instructions:hover {
-    color: #6bffe0;
-}
-
 .modal {
-
     display: none;
     position: fixed;
     z-index: 1;

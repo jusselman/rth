@@ -7,3 +7,7 @@ nodemon server
 npm run server
 
 npm i express express-validator bcryptjs config gravatar jsonwebtoken mongoose request
+
+npm install -g serve
+
+serve -s build

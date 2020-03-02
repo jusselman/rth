@@ -6,7 +6,6 @@ class BeatPad extends React.Component {
     componentDidMount() {
         console.log(this.audio)
         document.addEventListener('keydown', this.handleKeydown)
-        window.focus()
     }
 
     componentWillUnmount() {
@@ -17,15 +16,27 @@ class BeatPad extends React.Component {
         if (e.keyCode === this.props.letter.charCodeAt()) {
             this.audio.play()
             this.audio.currentTime = 0
+            // document.getElementById(`${this.props.letter}`).classList.add("playing");
+            // setTimeout(function () {
+            //     document.getElementById(`${this.props.letter}`).classList.remove("playing");
+            // }, 250);
         }
     }
 
+
+
     handleClick = () => {
-        this.audio.play()
+        this.audio.play();
         this.audio.currentTime = 0
+        // document.getElementById(`${this.props.letter}`).classList.add("playing");
+        // setTimeout(function () {
+        //     document.getElementById(`${this.props.letter}`).classList.remove("playing");
+        // }, 250);
+
     }
 
     render() {
+
         return (
             <div
                 className='drum-pad'

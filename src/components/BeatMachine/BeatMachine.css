@@ -1,0 +1,8 @@
+.drum-container {
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.drum-row {
+    display: flex;
+}
