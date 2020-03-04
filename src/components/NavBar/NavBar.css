@@ -22,3 +22,14 @@ a {
     color: #fff;
     background: #000;
 }
+
+@media(max-width:769px) {
+    .NavBar {
+        font-size: 12px;
+        color: #fff;
+    }
+
+    .NavBar-link {
+        margin: 0 5px;
+    }
+}

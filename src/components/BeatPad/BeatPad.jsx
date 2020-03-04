@@ -13,37 +13,35 @@ class BeatPad extends React.Component {
     }
 
     handleKeydown = e => {
+        let beatKey = document.getElementById(this.props.id);
         if (e.keyCode === this.props.letter.charCodeAt()) {
             this.audio.play()
             this.audio.currentTime = 0
-            // document.getElementById(`${this.props.letter}`).classList.add("playing");
-            // setTimeout(function () {
-            //     document.getElementById(`${this.props.letter}`).classList.remove("playing");
-            // }, 250);
+            beatKey.classList.add("playing");
+            setTimeout(() => {
+                document.getElementById(this.props.id).classList.remove("playing");
+            }, 250);
         }
     }
 
-
-
     handleClick = () => {
+        let beatKey = document.getElementById(this.props.id);
         this.audio.play();
         this.audio.currentTime = 0
-        // document.getElementById(`${this.props.letter}`).classList.add("playing");
-        // setTimeout(function () {
-        //     document.getElementById(`${this.props.letter}`).classList.remove("playing");
-        // }, 250);
-
+        beatKey.classList.add("playing");
+        setTimeout(() => {
+            document.getElementById(this.props.id).classList.remove("playing");
+        }, 250);
     }
 
     render() {
-
         return (
             <div
                 className='drum-pad'
                 id={this.props.id}
                 onClick={this.handleClick}
             >
-                <div className="key">{this.props.letter}</div>
+                <div className="key">{this.props.letter}<br></br>{this.props.name}</div>
                 <audio id={this.props.letter}
                     className='clip'
                     src={this.props.src}
