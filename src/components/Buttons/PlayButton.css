@@ -1,0 +1,100 @@
+button.play-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 0;
+    border: 0;
+    border-radius: 35px;
+    margin: 18px;
+    outline: none;
+}
+
+.notPlay {
+    width: 128px;
+    height: 128px;
+    font-size: 0;
+    border: 4px solid black;
+    border-radius: 5px;
+    margin: 0;
+    outline: none;
+    color: black;
+    background-color: rgb(23, 76, 85);
+    float: left;
+}
+
+.play {
+    width: 128px;
+    height: 128px;
+    font-size: 0;
+    background-color: rgb(87, 230, 255);
+    border: 4px solid black;
+    color: black;
+    border-radius: 5px;
+    margin: 0;
+    outline: none;
+    animation-name: play-glow;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    float: left;
+}
+
+.play-btn-container {
+    width: 512px;
+    margin: 0 auto;
+
+}
+
+.playing-btn-content {
+    color: black;
+    font-size: 20px;
+    z-index: 9999;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.play-btn-content {
+    color: #fff;
+    font-size: 20px;
+    z-index: 9999;
+    font-family: 'Abril Fatface', cursive;
+}
+
+@keyframes play-glow {
+    0% {
+        background-color: rgb(87, 230, 255);
+        box-shadow: 0px 0px 6px 0px rgba(53, 177, 199, 0.3);
+    }
+
+    55% {
+        background-color: rgb(87, 230, 255);
+        box-shadow: 0px 0px 6px 10px rgba(77, 185, 205, 0.3);
+    }
+
+    75% {
+        background-color: rgb(87, 230, 255);
+        box-shadow: 0px 0px 6px 10px rgba(52, 190, 215, 0.3);
+    }
+}
+
+@media(max-width:769px) {
+    .play {
+        width: 84px;
+        height: 84px;
+        border: 2px solid black;
+    }
+
+    .notPlay {
+        width: 84px;
+        height: 84px;
+        border: 2px solid black;
+    }
+
+    .play-btn-container {
+        width: 336px;
+    }
+
+    .playing-btn-content,
+    .play-btn-content {
+        font-size: 10px;
+    }
+
+}

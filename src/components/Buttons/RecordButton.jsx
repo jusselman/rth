@@ -8,7 +8,7 @@ function RecordButton(props) {
     const toggleRecord = () => makeRecord(!recording);
 
     return (
-        <div className="record-btn-container">
+        <>
             <button
                 className={
                     recording ?
@@ -23,9 +23,8 @@ function RecordButton(props) {
                 }
             </button>
 
-        </div>
+        </>
     )
-
 }
 
 

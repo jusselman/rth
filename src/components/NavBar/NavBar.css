@@ -7,20 +7,55 @@
     font-size: 20px;
 }
 
-.NavBar-link {
-    margin: 0 10px;
-    color: #fff;
-
-}
-
-a {
-    color: #fff !important;
-    margin: 0 10px;
+.NavBar-link,
+.NavBar-link:after,
+.NavBar-link:before {
+    transition: all .5s;
 }
 
 .NavBar-welcome {
     color: #fff;
     background: #000;
+}
+
+.NavBar-link {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.NavBar-link:visited {
+    color: #fff;
+}
+
+.NavBar-link:hover {
+    color: #000;
+}
+
+.NavBar-link:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    background: #fff;
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+}
+
+.NavBar-link:hover:after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
 }
 
 @media(max-width:769px) {

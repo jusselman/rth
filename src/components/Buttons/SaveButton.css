@@ -1,0 +1,100 @@
+button.save-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 0;
+    background-color: rgb(116, 41, 7);
+    border: 0;
+    border-radius: 35px;
+    margin: 18px;
+    outline: none;
+}
+
+.notSave {
+    width: 128px;
+    height: 128px;
+    font-size: 0;
+    border: 4px solid black;
+    border-radius: 5px;
+    margin: 0;
+    outline: none;
+    color: black;
+    background-color: rgb(116, 41, 7);
+    float: left;
+}
+
+.save {
+    width: 128px;
+    height: 128px;
+    font-size: 0;
+    background-color: rgb(116, 41, 7);
+    border: 4px solid black;
+    color: black;
+    border-radius: 5px;
+    margin: 0;
+    outline: none;
+    animation-name: save-glow;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    float: left;
+}
+
+.save-btn-container {
+    width: 512px;
+    margin: 0 auto;
+
+}
+
+.saving-btn-content {
+    color: black;
+    font-size: 20px;
+    z-index: 9999;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.save-btn-content {
+    color: #fff;
+    font-size: 20px;
+    z-index: 9999;
+    font-family: 'Abril Fatface', cursive;
+}
+
+@keyframes save-glow {
+    0% {
+        background-color: rgb(225, 101, 43);
+        border-color: rgb(225, 101, 43);
+        box-shadow: 0px 0px 6px 0px rgba(255, 101, 43, 0.591);
+    }
+
+    55% {
+        background-color: rgb(225, 101, 43);
+        border-color: rgb(177, 82, 38);
+        box-shadow: 0px 0px 6px 10px rgba(255, 101, 43, 0.591);
+    }
+
+    75% {
+        background-color: rgb(225, 101, 43);
+        border-color: rgb(130, 61, 29);
+        box-shadow: 0px 0px 6px 10px rgba(255, 101, 43, 0.591);
+    }
+}
+
+@media(max-width:769px) {
+    .save {
+        width: 84px;
+        height: 84px;
+        border: 2px solid black;
+    }
+
+    .notSave {
+        width: 84px;
+        height: 84px;
+        border: 2px solid black;
+    }
+
+    .saving-btn-content,
+    .save-btn-content {
+        font-size: 10px;
+    }
+
+}

@@ -4,7 +4,6 @@ import './BeatPad.css';
 class BeatPad extends React.Component {
 
     componentDidMount() {
-        console.log(this.audio)
         document.addEventListener('keydown', this.handleKeydown)
     }
 
