@@ -1,15 +1,4 @@
 button.save-btn {
-    width: 35px;
-    height: 35px;
-    font-size: 0;
-    background-color: rgb(116, 41, 7);
-    border: 0;
-    border-radius: 35px;
-    margin: 18px;
-    outline: none;
-}
-
-.notSave {
     width: 128px;
     height: 128px;
     font-size: 0;
@@ -17,18 +6,16 @@ button.save-btn {
     border-radius: 5px;
     margin: 0;
     outline: none;
-    color: black;
+    color: #fff;
     background-color: rgb(116, 41, 7);
-    float: left;
 }
 
 .save {
     width: 128px;
     height: 128px;
-    font-size: 0;
+    font-size: 10rem;
     background-color: rgb(116, 41, 7);
     border: 4px solid black;
-    color: black;
     border-radius: 5px;
     margin: 0;
     outline: none;
@@ -36,20 +23,12 @@ button.save-btn {
     animation-duration: .5s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
-    float: left;
+    z-index: 9999;
 }
 
 .save-btn-container {
     width: 512px;
     margin: 0 auto;
-
-}
-
-.saving-btn-content {
-    color: black;
-    font-size: 20px;
-    z-index: 9999;
-    font-family: 'Abril Fatface', cursive;
 }
 
 .save-btn-content {
@@ -57,6 +36,12 @@ button.save-btn {
     font-size: 20px;
     z-index: 9999;
     font-family: 'Abril Fatface', cursive;
+}
+
+.save-btn-content svg.MuiSvgIcon-root,
+.saving-btn-content svg.MuiSvgIcon-root {
+    font-size: 3.75rem;
+    margin-top: 10px;
 }
 
 @keyframes save-glow {
@@ -80,21 +65,26 @@ button.save-btn {
 }
 
 @media(max-width:769px) {
-    .save {
+    button.save-btn {
         width: 84px;
         height: 84px;
         border: 2px solid black;
     }
 
-    .notSave {
+    /* .notSave {
         width: 84px;
         height: 84px;
         border: 2px solid black;
-    }
+    } */
 
     .saving-btn-content,
     .save-btn-content {
         font-size: 10px;
     }
 
+    .save-btn-content svg.MuiSvgIcon-root,
+    .saving-btn-content svg.MuiSvgIcon-root {
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
 }

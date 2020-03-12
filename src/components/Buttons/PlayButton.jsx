@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './PlayButton.css';
+import './Buttons.css';
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 
 function PlayButton(props) {
 
@@ -18,8 +20,8 @@ function PlayButton(props) {
                 onClick={togglePlay}
             >
                 {playing ?
-                    <p className="playing-btn-content">Playing</p> :
-                    <p className="play-btn-content">Play</p>
+                    <p className="playing-btn-content"><PlayArrowIcon /></p> :
+                    <p className="play-btn-content"><PlayArrowIcon /></p>
                 }
             </button>
         </>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import Home from '../Home/Home';
 import BeatPadPage from '../BeatPadPage/BeatPadPage';
@@ -12,7 +12,6 @@ import Profile from '../Profile/Profile';
 import EditPage from '../EditPage/EditPage';
 import ProfileSignUp from '../../components/ProfileSignUp/ProfileSignUp';
 import userService from '../../utils/userService';
-import tokenService from '../../utils/tokenService';
 import profileService from '../../utils/profileService';
 
 class App extends Component {
@@ -24,7 +23,7 @@ class App extends Component {
     }
   }
 
-  
+
 
   handleDeleteProfile = async (id) => {
     console.log(typeof (id));

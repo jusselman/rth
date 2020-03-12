@@ -1,26 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './StopButton.css';
+import './Buttons.css';
+import StopIcon from '@material-ui/icons/Stop';
 
 function StopButton(props) {
 
-    const [stopping, makeStop] = useState(false);
-
-    const togglePlay = () => makeStop(!stopping);
+    function handleClick() {
+        document.getElementById('stopBtn').classList.add("stop")
+        setTimeout(() => {
+            document.getElementById('stopBtn').classList.remove("stop");
+        }, 500);
+    }
 
     return (
         <>
             <button
-                className={
-                    stopping ?
-                        'stop' :
-                        'notStop'
-                }
-                onClick={togglePlay}
+                className="stop-btn"
+                onClick={handleClick}
+                id="stopBtn"
             >
-                {stopping ?
-                    <p className="stopping-btn-content">Stop</p> :
-                    <p className="stop-btn-content">Stop</p>
-                }
+                <p className="saving-btn-content"><StopIcon /></p>
             </button>
         </>
     )

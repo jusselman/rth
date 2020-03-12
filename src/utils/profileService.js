@@ -1,5 +1,4 @@
 import userService from './userService';
-import { type } from 'os';
 
 async function addProfile(profileData) {
     if (!userService.getUser()) return;

@@ -1,13 +1,3 @@
-button.play-btn {
-    width: 35px;
-    height: 35px;
-    font-size: 0;
-    border: 0;
-    border-radius: 35px;
-    margin: 18px;
-    outline: none;
-}
-
 .notPlay {
     width: 128px;
     height: 128px;
@@ -35,7 +25,7 @@ button.play-btn {
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    float: left;
+    z-index: 9999;
 }
 
 .play-btn-container {
@@ -46,32 +36,36 @@ button.play-btn {
 
 .playing-btn-content {
     color: black;
-    font-size: 20px;
     z-index: 9999;
-    font-family: 'Abril Fatface', cursive;
 }
 
 .play-btn-content {
-    color: #fff;
-    font-size: 20px;
+    color: rgb(219, 255, 228);
+    font-size: large;
     z-index: 9999;
-    font-family: 'Abril Fatface', cursive;
+}
+
+svg.MuiSvgIcon-root {
+    font-size: 5rem;
 }
 
 @keyframes play-glow {
     0% {
-        background-color: rgb(87, 230, 255);
-        box-shadow: 0px 0px 6px 0px rgba(53, 177, 199, 0.3);
+        background-color: rgb(46, 208, 237);
+        border-color: rgb(51, 207, 235);
+        box-shadow: 0px 0px 6px 0px rgba(59, 222, 250, 0.3);
     }
 
     55% {
-        background-color: rgb(87, 230, 255);
+        background-color: rgb(31, 221, 255);
+        border-color: rgb(31, 221, 255);
         box-shadow: 0px 0px 6px 10px rgba(77, 185, 205, 0.3);
     }
 
     75% {
-        background-color: rgb(87, 230, 255);
-        box-shadow: 0px 0px 6px 10px rgba(52, 190, 215, 0.3);
+        background-color: rgb(57, 225, 255);
+        border-color: rgb(64, 196, 220);
+        box-shadow: 0px 0px 6px 10px rgba(43, 204, 232, 0.557);
     }
 }
 
@@ -95,6 +89,10 @@ button.play-btn {
     .playing-btn-content,
     .play-btn-content {
         font-size: 10px;
+    }
+
+    svg.MuiSvgIcon-root {
+        font-size: 2rem;
     }
 
 }

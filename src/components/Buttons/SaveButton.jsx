@@ -1,26 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './SaveButton.css';
+import './Buttons.css';
+import SaveIcon from '@material-ui/icons/Save';
 
 function SaveButton(props) {
 
-    const [saving, makeSave] = useState(false);
-
-    const toggleSave = () => makeSave(!saving);
+    function handleClick() {
+        document.getElementById('saveBtn').classList.add("save")
+        setTimeout(() => {
+            document.getElementById('saveBtn').classList.remove("save");
+        }, 500);
+    }
 
     return (
         <>
             <button
-                className={
-                    saving ?
-                        'save' :
-                        'notSave'
-                }
-                onClick={toggleSave}
+                className="save-btn"
+                onClick={handleClick}
+                id="saveBtn"
             >
-                {saving ?
-                    <p className="saving-btn-content">Save</p> :
-                    <p className="save-btn-content">Save</p>
-                }
+                <p className="saving-btn-content"><SaveIcon /></p>
             </button>
         </>
     )

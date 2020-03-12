@@ -19,7 +19,6 @@ button.record-btn {
     outline: none;
     color: black;
     background-color: rgb(19, 50, 43);
-    float: left;
 }
 
 .rec {
@@ -36,7 +35,7 @@ button.record-btn {
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    float: left;
+    z-index: 9999;
 }
 
 .record-btn-container {
@@ -62,16 +61,19 @@ button.record-btn {
 @keyframes rec-glow {
     0% {
         background-color: rgb(83, 191, 168);
+        border-color: rgb(83, 191, 168);
         box-shadow: 0px 0px 6px 0px rgba(81, 208, 180, 0.3);
     }
 
     55% {
         background-color: rgb(99, 222, 195);
+        border-color: rgb(44, 135, 115);
         box-shadow: 0px 0px 6px 10px rgba(81, 208, 180, 0.3);
     }
 
     75% {
         background-color: rgb(75, 208, 179);
+        border-color: rgb(24, 121, 100);
         box-shadow: 0px 0px 6px 10px rgba(81, 208, 180, 0.3);
     }
 }

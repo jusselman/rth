@@ -17,6 +17,7 @@ class BeatPad extends React.Component {
             this.audio.play()
             this.audio.currentTime = 0
             beatKey.classList.add("playing");
+            // beatKey.classList.remove("key");
             setTimeout(() => {
                 document.getElementById(this.props.id).classList.remove("playing");
             }, 250);
@@ -28,6 +29,7 @@ class BeatPad extends React.Component {
         this.audio.play();
         this.audio.currentTime = 0
         beatKey.classList.add("playing");
+        // beatKey.classList.remove("key");
         setTimeout(() => {
             document.getElementById(this.props.id).classList.remove("playing");
         }, 250);
