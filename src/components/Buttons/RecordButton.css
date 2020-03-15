@@ -6,6 +6,7 @@ button.record-btn {
     border: 0;
     border-radius: 35px;
     margin: 18px;
+    color: green;
     outline: none;
 }
 
@@ -52,7 +53,7 @@ button.record-btn {
 }
 
 .record-btn-content {
-    color: #fff;
+    color: rgb(163, 220, 207);
     font-size: 20px;
     z-index: 9999;
     font-family: 'Abril Fatface', cursive;

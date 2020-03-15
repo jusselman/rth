@@ -6,7 +6,7 @@ button.save-btn {
     border-radius: 5px;
     margin: 0;
     outline: none;
-    color: #fff;
+    color: rgb(255, 210, 189);
     background-color: rgb(116, 41, 7);
 }
 
@@ -41,7 +41,7 @@ button.save-btn {
 .save-btn-content svg.MuiSvgIcon-root,
 .saving-btn-content svg.MuiSvgIcon-root {
     font-size: 3.75rem;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 @keyframes save-glow {
@@ -49,6 +49,7 @@ button.save-btn {
         background-color: rgb(225, 101, 43);
         border-color: rgb(225, 101, 43);
         box-shadow: 0px 0px 6px 0px rgba(255, 101, 43, 0.591);
+        color: #fff;
     }
 
     55% {
@@ -87,4 +88,6 @@ button.save-btn {
         font-size: 1.5rem;
         margin-top: 0;
     }
+
+
 }

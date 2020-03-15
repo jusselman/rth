@@ -1,0 +1,140 @@
+.css-2b097c-container {
+    width: 128px;
+    height: 128px;
+    margin: 0 auto;
+}
+
+.css-26l3qy-menu {
+    color: #000 !important;
+}
+
+.css-zk88xw-singleValue {
+    left: 15%;
+}
+
+.css-1okebmr-indicatorSeparator {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    width: 0 !important;
+
+    box-sizing: border-box;
+}
+
+.css-1hb7zxy-IndicatorsContainer {
+    width: 0;
+}
+
+.css-6q0nyr-Svg {
+    width: 0;
+}
+
+.css-1wa3eu0-placeholder {
+    color: #2f3421 !important;
+}
+
+.css-1dxkuzc-Menu {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    overflow-x: hidden;
+    /* padding-top: -1000px; */
+}
+
+.drumkit-placeholder {
+    margin: 0 auto;
+    font-family: 'Abril Fatface', cursive;
+    transition: .3s all ease-in-out;
+}
+
+.drum-place-click {
+    animation-name: placeholder-glow;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+
+@keyframes placeholder-glow {
+    0% {
+        background-color: rgb(163, 220, 207);
+        border-color: rgb(163, 220, 207);
+        box-shadow: 0px 0px 6px 0px rgb(241, 218, 164, 0.591);
+    }
+
+    55% {
+        background-color: rgb(163, 220, 207);
+        border-color: rgb(163, 220, 207);
+        box-shadow: 0px 0px 6px 10px rgb(241, 218, 164, 0.591);
+    }
+
+    75% {
+        background-color: rgb(163, 220, 207);
+        border-color: rgb(163, 220, 207);
+        box-shadow: 0px 0px 6px 10px rgb(241, 218, 164, 0.591);
+    }
+}
+
+
+@media(max-width:769px) {
+    .beat-container {
+        display: block;
+    }
+
+    .controls {
+        width: 336px;
+        margin: 0 auto;
+    }
+
+    .drumkit-placeholder {
+        margin: 4px 0;
+        background: rgb(47, 96, 88) !important;
+        color: rgb(163, 220, 207);
+    }
+
+    .css-1cl8beu-Control {
+        height: 80px !important;
+        width: 80px !important;
+        font-size: 10px;
+        border: 2px solid black !important;
+        background: rgb(47, 96, 88) !important;
+        color: rgb(163, 220, 207);
+    }
+
+    .css-1hwfws3 {
+        transform: translate(10%, 5%);
+        font-size: 10px;
+    }
+
+    .css-2b097c-container {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+    }
+
+    .css-zk88xw-singleValue {
+        color: rgb(163, 220, 207) !important;
+    }
+
+    .css-1wa3eu0-placeholder {
+        color: rgb(163, 220, 207) !important;
+    }
+
+    .css-1dxkuzc-Menu {
+        height: 80px !important;
+        width: 80px !important;
+        font-size: 10px !important;
+        border: 2px solid black !important;
+        background: rgb(47, 96, 88) !important;
+        color: rgb(163, 220, 207) !important;
+    }
+
+    .css-2b097c-container {
+        height: 80px !important;
+        width: 80px !important;
+        margin: 0;
+    }
+
+    .drumkit-placeholder {
+        margin-top: 4px;
+    }
+}

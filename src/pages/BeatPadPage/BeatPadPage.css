@@ -1,7 +1,33 @@
 .BeatPadPage {
-    background: grey !important;
+    /* background: linear-gradient(90deg, rgba(164, 156, 147, 1) 0%, rgba(108, 97, 85, 1) 18%, rgba(96, 85, 75, 1) 81%, rgba(150, 138, 126, 1) 100%) !important; */
     width: 100%;
     height: 100vh;
+    background: black;
 }
 
-@media(max-width:769px) {}
+.beat-container {
+    display: flex;
+    background: #645f65;
+    box-shadow: inset 3px 3px 20px #000000;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.pads {
+    width: 50%;
+}
+
+.controls {
+    width: 50%;
+}
+
+@media(max-width:769px) {
+    .pads {
+        width: 100%;
+    }
+
+    .beat-container {
+        width: fit-content;
+    }
+}
