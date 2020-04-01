@@ -4,6 +4,7 @@ import './BeatMachine.css';
 
 function BeatMachine(props) {
 
+
     // default drum kit //
     const data1 = [
         { id: 'tom1', name: 'tom1', letter: '2', src: 'http://www.denhaku.com/r_box/sr16/sr16tom/loelectm.wav' },

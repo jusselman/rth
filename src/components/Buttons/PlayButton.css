@@ -45,6 +45,17 @@
     z-index: 9999;
 }
 
+.beat-wrapper {
+    position: absolute;
+    background: teal;
+    height: 161px;
+    width: 244px;
+    margin-top: 84px;
+    margin-left: 84px;
+    border: 4px solid black;
+    border-radius: 5px;
+}
+
 svg.MuiSvgIcon-root {
     font-size: 5rem;
 }
