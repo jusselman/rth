@@ -1,17 +1,16 @@
 import React, { setState } from 'react';
 import vid from './VideoBg.mp4';
-// import './Video.css';
 import './VideoBg.css';
-// import Player from 'video-react';
-
 
 const VideoBg = () => {
 
     return (
         <>
-            <video autoPlay muted loop className="Video" >
-                <source src={vid} type="video/mp4" />
-            </video>
+            <div className="video-container">
+                <video height="100%" overflow="hidden" autoPlay muted loop className="Video" >
+                    <source src={vid} type="video/mp4" />
+                </video>
+            </div>
         </>
     )
 }

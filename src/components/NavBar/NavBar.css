@@ -1,7 +1,7 @@
 .NavBar {
     display: flex;
     justify-content: center;
-    background: #000;
+    background: rgba(0, 0, 0, .75);
     padding: 20px;
     font-size: 20px;
 }

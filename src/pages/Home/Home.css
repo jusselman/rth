@@ -3,12 +3,27 @@
 }
 
 body {
-    /* background-image: url('https://i.imgur.com/nnXpvXD.jpg'); */
+    background-image: url('https://i.imgur.com/nnXpvXD.jpg');
     color: #fff;
+}
+
+.Home-Container {
+    overflow-x: hidden !important;
+    width: 100%;
+}
+
+video {
+    overflow-x: hidden !important;
+
 }
 
 h1.home-title {
     font-size: 50px;
+    text-shadow: -2px 0px 4px #FFC5C5;
+}
+
+.home-description {
+    text-shadow: -2px 0px 4px #FFC5C5;
 }
 
 .Home {
@@ -16,4 +31,5 @@ h1.home-title {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow: hidden;
 }

@@ -1,6 +1,5 @@
 .anim {
     animation: fadeIn 2.5s;
-
 }
 
 @keyframes fadeIn {
@@ -11,7 +10,7 @@
 
     to {
         opacity: 1;
-        margin-top: 2rem;
+        /* margin-top: 2rem; */
     }
 }
 

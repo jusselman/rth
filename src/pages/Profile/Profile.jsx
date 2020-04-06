@@ -33,9 +33,8 @@ class Profile extends Component {
                         <Link to='/profile' className='delete-profile' onClick={() => this.props.handleDeleteProfile(this.props.profile._id.toString())}>DELETE</Link>
 
                     </div>
-
-
-                    : <Link to='/profile-sign-up'><h2 className="profile-create">Create New Profile</h2></Link>
+                    :
+                    <Link to='/profile-sign-up' className="cancel-link">Create New Profile</Link>
 
                 }
 

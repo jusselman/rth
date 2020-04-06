@@ -29,7 +29,7 @@ class LoginPage extends Component {
 
     render() {
         return (
-            <div className="LoginPage">
+            <div className="form-auth">
                 <header className="header-footer">Enter</header>
                 <form className="form-horizontal" onSubmit={this.handleSubmit} >
                     <div className="form-group">
@@ -44,8 +44,13 @@ class LoginPage extends Component {
                     </div>
                     <div className="form-group">
                         <div className="col-sm-12 text-center">
-                            <button className="btn btn-default">Enter</button>&nbsp;&nbsp;&nbsp;
-              <Link to='/'>Cancel</Link>
+                            <button className="btnLogin">Enter</button>&nbsp;&nbsp;&nbsp;
+                    <Link
+                                to='/'
+                                className="cancel-link"
+                            >
+                                Cancel
+                    </Link>
                         </div>
                     </div>
                 </form>
