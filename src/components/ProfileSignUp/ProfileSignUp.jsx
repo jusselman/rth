@@ -43,7 +43,7 @@ class ProfileSignUp extends Component {
                 <form className="form-horizontal form-signup" onSubmit={this.handleSubmit} >
                     <div className="form-group">
                         <div className="col-sm-12">
-                            <input type="text" className="form-control" placeholder="Photo" value={this.state.photo} name="photo" onChange={this.handleChange} />
+                            <input type="file" className="form-control" placeholder="Photo" value={this.state.photo} name="photo" onChange={this.handleChange} />
                         </div>
                     </div>
                     <div className="form-group">

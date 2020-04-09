@@ -19,12 +19,33 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/profiles', require('./routes/api/profiles'));
 
+// file upload for images 
+// app.use(fileUpload());
+
 // The following "catch *" route is necessary
 // for SPA client-side routing to properly work 
 app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
+// file upload, might not be necessary //
+
+// app.post('/upload', (req, res) => {
+//     if (req.files === null) {
+//         return res.status(400).json({ msg: 'No Image Uploaded' });
+//     }
+
+//     const file = req.files.file;
+
+//     file.mv(`${__dirname}/public/uploads/${file.name}`, err => {
+//         if (err) {
+//             console.error(err);
+//             return res.status(500).send(err);
+//         }
+
+//         res.json({ fileName: file.name, filePath: `uploads/${file.name}` });
+//     });
+// })
 
 const port = process.env.PORT || 3001;
 

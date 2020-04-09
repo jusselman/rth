@@ -14,7 +14,6 @@ body {
 
 video {
     overflow-x: hidden !important;
-
 }
 
 h1.home-title {
@@ -26,10 +25,54 @@ h1.home-title {
     text-shadow: -2px 0px 4px #FFC5C5;
 }
 
+a.home-link {
+    font-size: 1.5rem;
+    text-shadow: -2px 0px 4px #FFC5C5;
+    color: #fff;
+    text-decoration: none;
+    transform: scale(1);
+    transition: .3s all ease-in-out;
+    /* animation: float 5s infinite ease-in-out; */
+}
+
+a.home-link:hover {
+    color: rgb(165, 207, 215);
+    text-shadow: 0px 2px 4px rgb(255, 255, 255);
+
+}
+
 .Home {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
+
+}
+
+@keyframes float {
+    0% {
+        text-shadow: 0px 2px 4px rgb(115, 222, 255);
+        color: rgb(255, 228, 240);
+
+    }
+
+    50% {
+        text-shadow: -2px 2px 4px rgb(110, 255, 212);
+        color: rgb(140, 255, 249);
+
+
+    }
+
+    100% {
+        text-shadow: 2px 0px 4px rgb(238, 175, 255);
+        color: #fff;
+
+    }
+}
+
+@media (max-width: 769px) {
+    .Home {
+        top: 35%;
+    }
 }
