@@ -13,9 +13,9 @@ const BeatPadPage = () => {
                     <BeatMachine />
                     <ControlRow />
                 </div>
-                <div className="controls">
+                {/* <div className="controls">
                     <DrumKit />
-                </div>
+                </div> */}
             </div>
         </div>
     )
