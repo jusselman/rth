@@ -2,8 +2,7 @@ import React from 'react';
 import BeatMachine from '../../components/BeatMachine/BeatMachine';
 import './BeatPadPage.css';
 import ControlRow from '../../components/ControlRow/ControlRow';
-import DrumKit from '../../components/BeatMachine/DrumKit/DrumKit';
-
+import AudioRecorder from '../../components/AudioRecorder/AudioRecorder';
 
 const BeatPadPage = () => {
     return (
@@ -11,7 +10,8 @@ const BeatPadPage = () => {
             <div className="beat-container">
                 <div className="pads">
                     <BeatMachine />
-                    <ControlRow />
+                    {/* <ControlRow /> */}
+                    <AudioRecorder />
                 </div>
                 {/* <div className="controls">
                     <DrumKit />

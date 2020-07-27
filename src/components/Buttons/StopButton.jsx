@@ -6,7 +6,8 @@ import StopIcon from '@material-ui/icons/Stop';
 function StopButton(props) {
 
     function handleClick() {
-        document.getElementById('stopBtn').classList.add("stop")
+        const stopBtn =
+            document.getElementById('stopBtn').classList.add("stop")
         setTimeout(() => {
             document.getElementById('stopBtn').classList.remove("stop");
         }, 500);

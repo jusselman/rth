@@ -7,7 +7,13 @@ function RecordButton(props) {
 
     const [recording, makeRecord] = useState(false);
 
-    const toggleRecord = () => makeRecord(!recording);
+    const toggleRecord = () => {
+        makeRecord(!recording);
+    }
+
+    const toggleConsole = () => {
+        console.log('Ya toggled!!!!!!!!!!!!!!!')
+    }
 
     return (
         <>
