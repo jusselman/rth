@@ -13,7 +13,6 @@ const Home = (props) => {
             <div className="Home anim">
                 <h1 className="home-title">RTHH</h1>
                 <h2 className="home-description">Make Beats on the fly</h2>
-                {/* <h2 className="home-description">Upload, Share, Link</h2> */}
                 <Link to='/beatpadpage' className="home-link">Start Playing</Link>
             </div>
         </div>
