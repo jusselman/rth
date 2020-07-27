@@ -61,7 +61,6 @@ class AudioRecorder extends Component {
             }).catch((e) => console.log(e));
     };
 
-
     componentDidMount = () => {
         navigator.getUserMedia({ audio: true },
             () => {
@@ -105,12 +104,9 @@ class AudioRecorder extends Component {
                         controls="controls"
                     />
                     <div className="SubAudio">
-                        <p>RTH: Beats on the Fly</p>
+                        <p>RTHH: Beats on the Fly</p>
                     </div>
                 </div>
-
-                {/* <RecordButton /> */}
-
             </div>
         );
     }

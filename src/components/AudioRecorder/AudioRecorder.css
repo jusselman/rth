@@ -110,8 +110,6 @@ audio {
 .SubAudio p {
     color: rgb(114, 114, 114);
     margin: auto;
-
-
 }
 
 @media(max-width:769px) {
@@ -130,5 +128,23 @@ audio {
     .recording-btn-content,
     .record-btn-content {
         font-size: 10px;
+    }
+
+    .AudioContainer {
+        width: 168px;
+        height: 84px;
+    }
+
+    .Controls {
+        width: 336px;
+    }
+
+    audio.Audio {
+        width: 167px;
+        height: 60px;
+    }
+
+    .SubAudio {
+        display: none;
     }
 }
