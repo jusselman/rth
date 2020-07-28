@@ -25,7 +25,8 @@ class Profile extends Component {
                 <h1>Profile</h1>
                 {this.props.profile
                     ?
-                    <div><img>{this.props.profile.photo}</img>
+                    <div>
+                        <img>{this.props.profile.photo}</img>
                         <p>{this.props.profile.name}</p>
                         <p>{this.props.profile.description}</p>
                         <p>{this.props.profile.link}</p>
