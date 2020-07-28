@@ -10,7 +10,7 @@ const BeatPadPage = () => {
             <div className="beat-container">
                 <div className="pads">
                     <BeatMachine />
-                    <AudioRecorder />
+                    <ControlRow />
                 </div>
             </div>
         </div>
