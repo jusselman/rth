@@ -73,7 +73,7 @@ function BeatMachine(props) {
                     src={d.src}
                 />
             ))}</div>
-            <AudioRecorder />
+
         </div>
     )
 }
