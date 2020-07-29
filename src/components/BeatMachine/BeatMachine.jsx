@@ -1,6 +1,7 @@
 import React from 'react';
 import BeatPad from '../BeatPad/BeatPad';
 import './BeatMachine.css';
+import AudioRecorder from '../../components/AudioRecorder/AudioRecorder';
 
 function BeatMachine(props) {
 
@@ -72,6 +73,7 @@ function BeatMachine(props) {
                     src={d.src}
                 />
             ))}</div>
+            <AudioRecorder />
         </div>
     )
 }
