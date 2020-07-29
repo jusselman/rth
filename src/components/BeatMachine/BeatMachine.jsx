@@ -74,7 +74,7 @@ function BeatMachine(props) {
                 />
             ))}</div>
             <div>
-                <AudioRecorder />
+
             </div>
 
         </div>
