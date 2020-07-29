@@ -73,10 +73,6 @@ function BeatMachine(props) {
                     src={d.src}
                 />
             ))}</div>
-            <div>
-
-            </div>
-
         </div>
     )
 }
